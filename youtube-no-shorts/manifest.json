@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Without Shorts",
+  "version": "1.0.0",
+  "description": "Hides Shorts everywhere on YouTube and opens Shorts links as regular videos.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "css": ["hide-shorts.css"],
+      "js": ["no-shorts.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

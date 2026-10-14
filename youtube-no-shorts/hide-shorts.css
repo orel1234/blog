@@ -1,0 +1,30 @@
+/* Shorts shelves on home, search, subscriptions and watch pages */
+ytd-reel-shelf-renderer,
+ytd-rich-shelf-renderer[is-shorts],
+ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model),
+grid-shelf-view-model:has(ytm-shorts-lockup-view-model),
+ytd-item-section-renderer:has(grid-shelf-view-model ytm-shorts-lockup-view-model),
+ytm-reel-shelf-renderer,
+ytm-shorts-lockup-view-model,
+
+/* Individual Shorts in feeds and search results */
+ytd-rich-item-renderer:has(a[href^="/shorts/"]),
+ytd-video-renderer:has(a[href^="/shorts/"]),
+ytd-grid-video-renderer:has(a[href^="/shorts/"]),
+ytd-compact-video-renderer:has(a[href^="/shorts/"]),
+ytm-video-with-context-renderer:has(a[href^="/shorts/"]),
+
+/* "Shorts" entries in the sidebar, mini sidebar and mobile bottom bar */
+ytd-guide-entry-renderer:has(a[href="/shorts"]),
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+ytd-mini-guide-entry-renderer:has(a[href="/shorts"]),
+ytm-pivot-bar-item-renderer:has(.pivot-shorts),
+
+/* "Shorts" tab on channel pages and filter chip in search */
+yt-tab-shape[tab-title="Shorts"],
+tp-yt-paper-tab:has(a[href$="/shorts"]),
+yt-chip-cloud-chip-renderer:has(yt-formatted-string[title="Shorts"]) {
+  display: none !important;
+}
